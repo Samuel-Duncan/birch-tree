@@ -1,9 +1,12 @@
 body {
   background-color: rgb(211, 0, 0);
-  color: black;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.members, .faq, .shop, .store-item {
+  background-color: black;
+  color: whitesmoke;
 }
 
 a {
@@ -11,7 +14,7 @@ a {
   color: inherit;
 }
 
-h1, img, h2 {
+h1, img, h2, p {
   margin: 0;
   padding: 0;
 }
@@ -19,6 +22,11 @@ h1, img, h2 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .dropbtn {
@@ -62,6 +70,20 @@ img {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: gray}
 
+/*.dropbtn:hover {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}*/
+
+.join-button:hover {
+  background-color: whitesmoke;
+}
+
+.submit-button:hover {
+  background-color: gray;
+}
+
 .main-menu {
   flex: 1;
 }
@@ -71,7 +93,7 @@ img {
   color: whitesmoke;
   display: flex;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   margin-top: -10px;
   margin-left: -10px;
   margin-right: -10px;
@@ -97,29 +119,207 @@ img {
   margin-right: 48px;
 }
 
-.part-two, .part-three {
+.part-two, .part-three, .part-four {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap-reverse;
-  gap: 96px;
-  margin-top: 200px;
+  gap: 72px;
+  margin-top: 150px;
 }
 
-.part-two {
+.part-two, .part-four {
   flex-direction: row-reverse;
   margin-bottom: -96px;
 }
 
+.part-three {
+  margin-bottom: -96px;
+}
+
 .part-two-right,
-.part-three-right {
+.part-three-right,
+.part-four-right {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 500px;
+  gap: 12px;
+  width: 600px;
 }
 
 .part-two-right {
   align-items: center;
 }
 
+.part-four {
+  margin-bottom: 150px;
+}
+
+.join-button {
+  font-size: 24px;
+  background-color: rgb(211, 0, 0);
+  border-color: black;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 24px;
+  margin-left: -10px;
+}
+
+.faq-content, .members-content {
+  padding-top: 100px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faq-title {
+  margin-top: 100px;
+  margin-bottom: 75px;
+  font-size: 30px;
+  margin: 150px;
+}
+
+.QA {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.question {
+  font-size: x-large;
+  margin-bottom: 25px;
+  font-weight: 1000px;
+}
+
+.answer {
+  font-size: large;
+  margin-bottom: 100px;
+}
+
+.members-content {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 96px;
+  height: auto;
+  flex-wrap: wrap-reverse;
+  flex: 1;
+  margin-top: 100px;
+}
+
+.text-boxes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  flex: 1;
+}
+
+.name {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.email, .subject, .message, .first-name, .last-name {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.submit-button {
+  font-size: 24px;
+  background-color: black;
+  border-color: whitesmoke;
+}
+
+input {
+  height: 32px;
+}
+
+#shop-title {
+  font-size: 150px;
+  margin-top: 150px;
+  margin-bottom: -150px;
+  display: flex;
+  align-self: center;
+}
+
+.shop-container {
+  margin-top: 150px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  flex: wrap;
+  width: 100%;
+  max-width: 100%;
+}
+
+.shop-image {
+  
+  margin-bottom: -100px;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.store-item-container {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  margin-bottom: 125px;
+  width: 100%;
+  flex: 1;
+  max-width: 100%;
+}
+
+.store-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  gap: 36px;
+  height: 100%;
+  width: 100%;
+  max-width: 750px;
+}
+
+.QA .question {
+  margin-bottom: 15px;
+}
+
+.shop-text {
+  font-size: 24px;
+}
+
+.price {
+  font-size: 20px;
+}
